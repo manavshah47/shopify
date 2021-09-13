@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SHOPIFY | ADIDAS</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Zilla+Slab:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- google fonts -->
+    <style>
+        footer {
+            background-image: url(public/footer/abstract_wavy_background_310468.jpg);
+            background-repeat: no-repeat;
+            background-size: 80em 17em;
+        }
+
+        * {
+            font-family: 'Kaisei Tokumin', serif;
+        }
+
+        h5 {
+            font-family: 'Zilla Slab', serif;
+        }
+
+        body {
+            background-color: #f3f3f3;
+        }
+        main {
+            min-height: 240vh;
+        }
+        body{
+            background-color: #f2f2f2;
+        }
+
+        .back-to-top a{
+            font-family: 'Acme', sans-serif;
+            text-decoration: none;
+            color: #000000de;
+            font-size: 4.6vh;
+            margin: 0;
+            padding: 2vh;
+        }
+
+        .back-to-top a:hover{
+            color: blue;
+        }
+
+        .back-to-top{
+            text-align: center;
+        }
+
+        .left-container {
+            float: left;
+            width: 49%;
+            /* border-right: 1px solid black; */
+        }
+
+        .right-container {
+            float: right;
+            width: 49%;
+        }
+
+        .image{
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+
+        .image img {
+            width: 55%;
+            /* padding: 0px 100px; */
+        }
+
+        .product-name {
+            font-size: 4vh;
+            font-family: 'Acme', sans-serif;
+            color: purple;
+            padding: 1em;
+        }
+
+        .features {
+            font-size: 2.5vh;
+            font-family: 'Noto Serif TC', serif;
+        }
+
+
+
+        .sizes {
+            font-size: 2.5vh;
+            font-family: 'Noto Serif TC', serif;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+
+        .sizes table {
+            width: 50%;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .sizes table,
+        td,
+        th {
+            border: 2px solid plum;
+            border-collapse: collapse;
+        }
+
+        /* small container */
+        .small-container {
+            width: 80%;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: auto;
+            background-color: white;
+        }
+
+        /* button */
+        .btn-1{
+            width: 300px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn-1 a {
+            text-decoration: none;
+            border: 2px solid #010100;
+            padding: 15px;
+            color: #000;
+            position: relative;
+            display: inline-block;
+        }
+
+        span {
+            position: relative;
+            z-index: 3;
+        }
+
+        .btn-1 a::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -2px;
+            width: calc(100% + 6px);
+            height: calc(100% - 10px);
+            background-color: #ffffff;
+            transition: all 0.5s ease-in-out;
+            transform: scaleY(1);
+        }
+
+        .btn-1 a:hover::before {
+            transform: scaleY(0);
+        }
+
+        .btn-1 a::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: -5px;
+            width: calc(100% - 10px);
+            height: calc(100% + 10px);
+            background-color: #ffffff;
+            transition: all 0.5s ease-in-out;
+            transform: scaleX(1);
+        }
+
+        .btn-1 a:hover::after{
+            transform: scaleX(0);
+        }
+
+        @media screen and (max-width:1000px) {
+            .sizes{
+                font-size: 1vh;
+            }
+            .product-name{
+                font-size: 2vh;
+            }
+            .features{
+                font-size: 1vh;
+            }
+            .small-container{
+                height: 50vh;
+            }
+            
+            main{
+                min-height: 200vh;
+            }
+
+            .sizes table{
+                margin: 5px;
+                padding: 1px;
+                font-size: 1vh;
+            }
+
+            .back-to-top a{
+                font-size: 2vh;
+                padding: 1vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SHOPIFY CLOTHS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarText">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="/" role="tab"
+                        aria-controls="home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="mutual-funds-tab" data-toggle="tab" href="/nike.html" role="tab" aria-controls="nike"
+                        aria-selected="false">NIKE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sip-tab" data-toggle="tab" href="/puma.html" role="tab" aria-controls="puma"
+                        aria-selected="false">PUMA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="daily-stock-tips-tab" data-toggle="tab" href="/adidas.html" role="tab"
+                        aria-controls="adidas" aria-selected="false">ADIDAS</a>
+                </li>
+            </ul>
+        </div>
+        <span class="navbar-text mx-3 float-left"> Boost your Style Sense. </span>
+        <!--extra tagline: "Remain fashionable", "Stop Thinking, Just Buy It" -->
+    </nav>
+
+    <main>
+        <br> <br>
+        <div class="small-container">
+            <div class="left-container">
+                <div class="image">
+                    <img src="public/adidas/Originals_WxE_Trefoil_Infill_Tee_White_H43943_21_model.jpg" alt="ORIGINALS WXE TREFOIL INFILL TEE image" title="none">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="info">
+                    <div class="product-name">
+                        Originals wxe trefoil infill tee
+                    </div>
+                    <div class="features">
+                        DETAILS : <br>
+                        <ul>
+                            <li>
+                                Crewneck
+                            </li>
+                            <li>
+                                100% cotton single jersey
+
+                            </li>
+                            <li>
+                                Color: White
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sizes">
+                        SIZE: <br>
+                        <table>
+                            <tr>
+                                <td>XS</td>
+                                <td>S</td>
+                                <td>M</td>
+                                <td>L</td>
+                                <td>XL</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-1">
+                        <a href="#"><span>Click here to Buy</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br> <br>
+        <hr>
+        <br> <br>
+
+        <div class="small-container">
+            <div class="left-container">
+                <div class="image">
+                    <img src="public/adidas/Must_Haves_Winners_Tee_Black_FI4761_21_model.jpg" alt="MUST HAVES WINNERS TEE image" title="none">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="info">
+                    <div class="product-name">
+                        Must haves winners tee
+                    </div>
+                    <div class="features">
+                        DETAILS: <br>
+                        <ul>
+                            <li>
+                                Regular fit
+                            </li>
+                            <li>
+                                Crewneck
+                            </li>
+                            <li>
+                                74% cotton, 26% polyester spacer
+                            </li>
+                            <li>
+                                Mélange t-shirt
+                            </li>
+                            <li>
+                                Raglan sleeves
+                            </li>
+                            <li>
+                                Color: Black Melange
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sizes">
+                        SIZE: <br>
+                        <table>
+                            <tr>
+                                <td>XS</td>
+                                <td>M</td>
+                                <td>L</td>
+                                <td>XXL</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-1">
+                        <a href="#"><span>Click here to Buy</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br> <br>
+        <hr>
+        <br> <br>
+
+        <div class="small-container">
+            <div class="left-container">
+                <div class="image">
+                    <img src="public/adidas/Must_Haves_Badge_of_Sport_Pullover_Grey_GE0693_01_laydown.jpg" alt="MUST HAVES BADGE OF SPORT PULLOVER image" title="none">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="info">
+                    <div class="product-name">
+                        Must haves badge of sport pullover
+                    </div>
+                    <div class="features">
+                        DETAILS: <br>
+                        <ul>
+                            <li>
+                                Regular fit is wider at the body, with a straight silhouette
+                            </li>
+                            <li>
+                                Long sleeves with ribbed cuffs
+                            </li>
+                            <li>
+                                70% cotton / 30% polyester French terry
+                            </li>
+                            <li>
+                                Kangaroo pockets; Lined hood; Ribbed hem
+                            </li>
+                            <li>
+                                Color: Medium Grey Heather / Grey Three / White
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sizes">
+                        SIZE: <br>
+                        <table>
+                            <tr>
+                                <td>XS</td>
+                                <td>S</td>
+                                <td>L</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-1">
+                        <a href="#"><span>Click here to Buy</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="small-container">
+            <div class="left-container">
+                <div class="image">
+                    <img src="public/adidas/adidas_x_Disney_Pixar_Monsters_Inc._Tee_Pink_GS2164_01_laydown.jpg" alt="ADIDAS X DISNEY PIXAR MONSTERS image" title="none">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="info">
+                    <div class="product-name">
+                        Adidas x disney pixar monsters
+                    </div>
+                    <div class="features">
+                        DETAILS: <br>
+                        <ul>
+                            <li>
+                                Slim fit
+                            </li>
+                            <li>
+                                Ribbed crewneck
+                            </li>
+                            <li>
+                                100% cotton single jersey
+                            </li>
+                            <li>
+                                ©Disney
+                            </li>
+                            <li>
+                                Color: Rose Tone / Vivid Red
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sizes">
+                        SIZE: <br>
+                        <table>
+                            <tr>
+                                <td>XS</td>
+                                <td>S</td>
+                                <td>M</td>
+                                <td>L</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-1">
+                        <a href="#"><span>Click here to Buy</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br> <br>
+        <hr>
+        <br> <br>
+
+    </main>
+
+    <footer>
+        <div class="container pt-10 pb-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/images/logo-light.png" class="logo-light" alt="" height="20">
+
+                    <!-- <p class="text-muted mt-4">We will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful.</p> -->
+                    <p class="text-muted mt-3">"Stop Thinking, Just Buy It"</p>
+                </div>
+
+                <div class="col-md-3 offset-md-3">
+                    <h5 class="text-dark f-17 my-1">Help</h5>
+                    <ul class="footer-links mb-0 mt-4">
+                        <li><a href="mailto:you@shopify.com" onMouseOver="this.style.color='red'"
+                                onMouseOut="this.style.color='#7c8ea2'">Mail</a></li>
+                        <li><a href="/contact-us.html" onMouseOver="this.style.color='red'"
+                                onMouseOut="this.style.color='#7c8ea2'" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 text-danger">
+                <div class="col-md-12">
+                    <div class="text-center text-danger">
+                        <p class=" mb-0 text-danger">CopyRight © 2021 - 2022 reserved. Made with &hearts; By<a
+                                href="https://shopify.com/" target="_blank" class="text-reset text-danger"> SHOPIFY</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

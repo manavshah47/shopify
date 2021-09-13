@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Zilla+Slab:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- google fonts -->
+    <style>
+        footer {
+            background-image: url(public/footer/abstract_wavy_background_310468.jpg);
+            background-repeat: no-repeat;
+            background-size: 100em 17em;
+        }
+
+        * {
+            font-family: 'Kaisei Tokumin', serif;
+        }
+
+        h5 {
+            font-family: 'Zilla Slab', serif;
+            /* font-weight: bold; */
+        }
+
+        .container a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            background: #f3f3f3;
+            color: #000000;
+            margin-top: 10px
+        }
+
+        div {
+            display: block;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+        }
+
+        .button {
+            display: inline-block;
+            background: #97cbfa;
+            border-radius: 5px;
+            height: 48px;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease
+        }
+
+        .button a {
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 48px;
+            color: #FFFFFF;
+            padding-left: 35px;
+            padding-right: 35px
+        }
+
+        .button:hover {
+            opacity: 0.8;
+            background: #0e8ce4;
+            ;
+        }
+
+        .contact_info {
+            width: 100%;
+            padding-top: 70px
+        }
+
+        .contact_info_item {
+            width: calc((100% - 60px) / 3);
+            height: 100px;
+            border: solid 1px #e8e8e8;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            padding-left: 32px;
+            padding-right: 15px;
+            display: inline-block;
+            align-items: center;
+        }
+
+
+
+
+        .contact_info_image {
+            width: 35px;
+            height: 35px;
+            text-align: center
+        }
+
+        .contact_info_image img {
+            max-width: 100%
+        }
+
+        .contact_info_content {
+            padding-left: 17px
+        }
+
+        .contact_info_title {
+            font-weight: 500
+        }
+
+        .contact_info_text {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5)
+        }
+
+        .contact_form {
+            padding-top: 85px
+        }
+
+        .contact_form_container {}
+
+        .contact_form_title {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 37px
+        }
+
+        .contact_form_inputs {
+            margin-bottom: 30px
+        }
+
+        .input_field {
+            width: calc((100% - 60px) / 3);
+            height: 50px;
+            padding-left: 25px;
+            border: solid 1px #e5e5e5;
+            border-radius: 5px;
+            outline: none;
+            color: #0e8ce4;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+            margin: 5px;
+        }
+
+        .input_field:focus,
+        .text_field:focus {
+            border-color: #b2b2b2
+        }
+
+        .input_field:hover,
+        .text_field:hover {
+            color: #0e8ce4;
+        }
+
+        .input_field::-webkit-input-placeholder,
+        .text_field::-webkit-input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #0e8ce4;
+        }
+
+        .input_field:-moz-placeholder,
+        .text_field:-moz-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #0e8ce4;
+        }
+
+        .input_field::-moz-placeholder,
+        .text_field::-moz-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #0e8ce4;
+        }
+
+        .input_field:-ms-input-placeholder,
+        .text_field:-ms-input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #0e8ce4;
+        }
+
+        .input_field::input-placeholder,
+        .text_field::input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.3)
+        }
+
+        .text_field {
+            width: 95%;
+            height: 160px;
+            padding-left: 25px;
+            padding-top: 15px;
+            border: solid 1px #e5e5e5;
+            border-radius: 5px;
+            color: #0e8ce4;
+            outline: none;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease
+        }
+
+        .contact_submit_button {
+            padding-left: 35px;
+            padding-right: 35px;
+            color: #FFFFFF;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-top: 24px
+        }
+
+        .panel {
+            width: 100%;
+            height: 50px;
+            background: #fafafa;
+            margin-top: 120px
+        }
+
+        @media only screen and (max-width: 991px) {
+            .contact_info_item {
+                width: 100%;
+                margin-bottom: 30px
+            }
+
+            .contact_info_item:last-child {
+                margin-bottom: 0px
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .input_field {
+                margin-bottom: 30px;
+                width: 100%
+            }
+
+            .input_field:last-child {
+                margin-bottom: 0px
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .contact_submit_button {
+                font-size: 13px;
+                padding-left: 25px;
+                padding-right: 25px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin: -10px;">
+        <a class="navbar-brand" href="#">SHOPIFY CLOTHS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarText">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="/" role="tab" aria-controls="home"
+                        aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="mutual-funds-tab" data-toggle="tab" href="/nike.html" role="tab"
+                        aria-controls="nike" aria-selected="false">NIKE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sip-tab" data-toggle="tab" href="/puma.html" role="tab" aria-controls="puma"
+                        aria-selected="false">PUMA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="daily-stock-tips-tab" data-toggle="tab" href="/adidas.html" role="tab"
+                        aria-controls="adidas" aria-selected="false">ADIDAS</a>
+                </li>
+            </ul>
+        </div>
+        <span class="navbar-text mx-3 float-left"> Boost your Style Sense. </span>
+        <!--extra tagline: "Remain fashionable", "Stop Thinking, Just Buy It" -->
+    </nav>
+
+    <div class="contact_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 flex-container">
+                    <div
+                        class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img src="public/images/phone.png" alt=""></div>
+                            <div class="contact_info_content">
+                                <div class="contact_info_title">Phone</div>
+                                <div class="contact_info_text">+91 11111 11111</div>
+                            </div>
+                        </div>
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img src="public/images/email.png" alt=""></div>
+                            <div class="contact_info_content">
+                                <div class="contact_info_title">Email</div>
+                                <div class="contact_info_text">you@shopify.com</div>
+                            </div>
+                        </div>
+                        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="contact_info_image"><img src="public/images/address.png" alt=""></div>
+                            <div class="contact_info_content">
+                                <div class="contact_info_title">Address</div>
+                                <div class="contact_info_text">07, Shopify Building, Vadodara, Gujarat, India.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="contact_form_container">
+                        <div class="contact_form_title">Get in Touch</div>
+                        <form id="contact-form" method="POST" action="/send" enctype="multipart/form-data">
+                            <div
+                                class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                                <input type="text" id="name" name="name" class="contact_form_name input_field"
+                                    placeholder="Your name" required="required" data-error="Name is required."
+                                    name="dname">
+                                <input type="text" id="email" name="email" class="contact_form_email input_field"
+                                    placeholder="Your email" required="required" data-error="Email is required."
+                                    name="demail">
+                                <input type="text" id="phone" name="phone" class="contact_form_phone input_field"
+                                    placeholder="Your phone number" name="dphone">
+                            </div>
+                            <div class="contact_form_text">
+                                <textarea id="message" class="text_field contact_form_message" name="dmessage" rows="4"
+                                    placeholder="Message" required="required"
+                                    data-error="Please, write us a message."></textarea>
+                            </div>
+                            <div class="contact_form_button">
+                                <button type="submit" id="submit" name="submit"
+                                    class="button contact_submit_button">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div>
+
+    <footer>
+        <div class="container pt-10 pb-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/images/logo-light.png" class="logo-light" alt="" height="20">
+
+                    <!-- <p class="text-muted mt-4">We will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful.</p> -->
+                    <p class="text-muted mt-3">"Stop Thinking, Just Buy It"</p>
+                </div>
+
+                <div class="col-md-3 offset-md-3">
+                    <h5 class="text-dark f-17 my-1">Help</h5>
+                    <ul class="footer-links mb-0 mt-4">
+                        <li><a href="mailto:you@shopify.com" onMouseOver="this.style.color='red'"
+                                onMouseOut="this.style.color='#7c8ea2'">Mail</a></li>
+                        <li><a href="/contact-us.html" onMouseOver="this.style.color='red'"
+                                onMouseOut="this.style.color='#7c8ea2'" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 text-danger">
+                <div class="col-md-12">
+                    <div class="text-center text-danger">
+                        <p class=" mb-0 text-danger">CopyRight © 2021 - 2022 reserved. Made with &hearts; By<a
+                                href="https://shopify.com/" target="_blank" class="text-reset text-danger"> SHOPIFY</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
